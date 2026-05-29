@@ -4,20 +4,21 @@
 [ext_resource type="Script" uid="uid://biffj4p4csoyx" path="res://scripts/player.gd" id="1_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(29, 28.5)
+size = Vector2(34, 33.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
-size = Vector2(32, 31)
+size = Vector2(29, 29.84375)
 
 [node name="player" type="CharacterBody2D" unique_id=2015092317]
 script = ExtResource("1_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1438499509]
-position = Vector2(0, 1.9073486e-06)
-scale = Vector2(0.20703125, 0.203125)
+position = Vector2(7.250001, -7.125)
+scale = Vector2(0.22265625, 0.21679686)
 texture = ExtResource("1_4flbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=684182783]
+position = Vector2(7, -7.75)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=478695205]
@@ -25,7 +26,7 @@ shape = SubResource("RectangleShape2D_onrkg")
 [node name="hitbox" type="Area2D" parent="." unique_id=1305312153]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=572695289]
-position = Vector2(0, -0.5)
+position = Vector2(7.5, -6.921875)
 shape = SubResource("RectangleShape2D_i3pqv")
 
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
