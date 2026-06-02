@@ -160,11 +160,24 @@ tile_set = SubResource("TileSet_oi3di")
 [node name="player" parent="." unique_id=2015092317 instance=ExtResource("2_vonw3")]
 position = Vector2(61, 54)
 
+[node name="Camera2D2" type="Camera2D" parent="player" unique_id=1096459506]
+position = Vector2(-61, -54)
+
+[node name="Label" type="Label" parent="player/Camera2D2" unique_id=1058311746]
+unique_name_in_owner = true
+offset_left = -466.0
+offset_top = -221.0
+offset_right = -356.0
+offset_bottom = -198.0
+text = "apple count: 0"
+
 [node name="appletimer" type="Timer" parent="." unique_id=742272565]
 wait_time = 1.1429999999999998
 autostart = true
 
 [node name="apple" parent="." unique_id=2008795732 instance=ExtResource("4_0b4ue")]
 position = Vector2(-665, 474)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=428017987]
 
 [connection signal="timeout" from="appletimer" to="." method="_on_appletimer_timeout"]
