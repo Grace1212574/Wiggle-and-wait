@@ -178,6 +178,6 @@ autostart = true
 [node name="apple" parent="." unique_id=2008795732 instance=ExtResource("4_0b4ue")]
 position = Vector2(-665, 474)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=428017987]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=383364478]
 
 [connection signal="timeout" from="appletimer" to="." method="_on_appletimer_timeout"]
