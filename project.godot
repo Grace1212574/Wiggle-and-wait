@@ -15,6 +15,10 @@ run/main_scene="uid://dovi2rt66ftpq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*uid://mca766alde3i"
+
 [input]
 
 up={

@@ -20,7 +20,7 @@ grow_vertical = 2
 scale = Vector2(2.4747186, 1.5703591)
 theme_override_constants/separation = 3
 
-[node name="Restart" type="Button" parent="BoxContainer" unique_id=876830435]
+[node name="start" type="Button" parent="BoxContainer" unique_id=876830435]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Restart"

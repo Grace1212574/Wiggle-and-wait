@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cnoe2tenwm8x4"]
+
+[ext_resource type="Script" uid="uid://bly6lmtotiacj" path="res://leaf.gd" id="1_qihfy"]
+[ext_resource type="Texture2D" uid="uid://bcw17b3eg5iw5" path="res://icon.svg" id="2_jiete"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbfpc"]
+size = Vector2(26, 30)
+
+[node name="leaf" type="Node2D" unique_id=648045290]
+script = ExtResource("1_qihfy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=609512715]
+position = Vector2(12.000002, -1.5)
+scale = Vector2(0.18750003, 0.2109375)
+texture = ExtResource("2_jiete")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1887297594]
+position = Vector2(12, -2)
+shape = SubResource("RectangleShape2D_kbfpc")

@@ -7,7 +7,6 @@
 size = Vector2(18, 17.5)
 
 [node name="apple" type="Area2D" unique_id=2008795732]
-position = Vector2(11, 9)
 script = ExtResource("1_n78qv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1497666506]

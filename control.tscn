@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ds6c57awld3ot"]
 
-[node name="Control" type="Control" unique_id=118378424]
+[node name="game over" type="Control" unique_id=118378424]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

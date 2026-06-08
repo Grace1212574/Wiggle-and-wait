@@ -145,7 +145,6 @@ separation = Vector2i(1, 1)
 sources/0 = SubResource("TileSetAtlasSource_vonw3")
 
 [node name="level" type="Node2D" unique_id=921695553]
-position = Vector2(-8, 21)
 script = ExtResource("1_oi3di")
 
 [node name="tilemaps" type="Node2D" parent="." unique_id=1753135470]
@@ -169,7 +168,7 @@ offset_left = -466.0
 offset_top = -221.0
 offset_right = -356.0
 offset_bottom = -198.0
-text = "apple count: 0"
+text = "Apple: 0"
 
 [node name="appletimer" type="Timer" parent="." unique_id=742272565]
 wait_time = 1.1429999999999998
