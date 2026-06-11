@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Globals="*uid://mca766alde3i"
 
+[global_group]
+
+hide=""
+
 [input]
 
 up={

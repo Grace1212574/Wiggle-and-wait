@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 var score = 0
 @onready var apple_label = %Label
+var hidingplaces = []
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("left","right","up","down")
@@ -13,3 +14,14 @@ func _physics_process(delta: float) -> void:
 func adds_score(number):
 	score += number
 	apple_label.text = "Apples"+str(score)
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if area.is_in_group("hide"):
+		hidingplaces.append(area)
+	
+	
+	
+func _on_hitbox_area_exited(area: Area2D) -> void:
+ if area.is_in_group(""):
+	hidingplaces.erase()
