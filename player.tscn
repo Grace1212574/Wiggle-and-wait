@@ -30,3 +30,4 @@ position = Vector2(7.5, -6.921875)
 shape = SubResource("RectangleShape2D_i3pqv")
 
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_exited" from="hitbox" to="." method="_on_hitbox_area_exited"]

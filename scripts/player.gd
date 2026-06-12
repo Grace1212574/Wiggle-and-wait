@@ -18,10 +18,13 @@ func adds_score(number):
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("hide"):
-		hidingplaces.append(area)
-	
-	
-	
+		if not hidingplaces.has(area):
+			hidingplaces.append(area)
+		self.visible = false
+		
 func _on_hitbox_area_exited(area: Area2D) -> void:
- if area.is_in_group(""):
-	hidingplaces.erase()
+	if area.is_in_group("hide"):
+		hidingplaces.erase(area)
+		if hidingplaces.is_empty():
+			self.visible = true
+	
