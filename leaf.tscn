@@ -9,7 +9,7 @@ size = Vector2(70.5, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qihfy"]
 size = Vector2(79, 27)
 
-[node name="leaf" type="Node2D" unique_id=648045290]
+[node name="leaf" type="Node2D" unique_id=648045290 groups=["leaf"]]
 script = ExtResource("1_qihfy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=609512715]

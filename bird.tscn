@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cl7rwbcwjxblu"]
+
+[ext_resource type="Texture2D" uid="uid://bcw17b3eg5iw5" path="res://icon.svg" id="1_g5k2s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crnqq"]
+size = Vector2(506, 452)
+
+[node name="bird" type="Node2D" unique_id=669877540]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2056778250]
+position = Vector2(-7, -3)
+scale = Vector2(3.7929688, 3.3554688)
+texture = ExtResource("1_g5k2s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1323251065]
+shape = SubResource("RectangleShape2D_crnqq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=956759070]

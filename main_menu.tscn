@@ -23,7 +23,7 @@ theme_override_constants/separation = 3
 [node name="start" type="Button" parent="BoxContainer" unique_id=876830435]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Restart"
+text = "Play"
 
 [node name="highscore" type="Button" parent="BoxContainer" unique_id=895025676]
 layout_mode = 2
