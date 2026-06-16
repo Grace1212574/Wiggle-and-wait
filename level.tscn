@@ -146,6 +146,8 @@ sources/0 = SubResource("TileSetAtlasSource_vonw3")
 
 [node name="level" type="Node2D" unique_id=921695553]
 script = ExtResource("1_oi3di")
+max_apples = null
+max_leaf = null
 
 [node name="tilemaps" type="Node2D" parent="." unique_id=1753135470]
 position = Vector2(0, 2)
@@ -181,6 +183,17 @@ autostart = true
 
 [node name="leaftimer" type="Timer" parent="." unique_id=138557762]
 autostart = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=485397430]
+
+[node name="warninglabel" type="Label" parent="CanvasLayer2" unique_id=883750681]
+visible = false
+offset_right = 213.0
+offset_bottom = 53.0
+text = "The bird is coming hide!!!!"
+
+[node name="birdtimer" type="Timer" parent="." unique_id=308350654]
+one_shot = true
 
 [connection signal="timeout" from="apple/appletimer" to="." method="_on_appletimer_timeout"]
 [connection signal="timeout" from="leaftimer" to="." method="_on_leaftimer_timeout"]

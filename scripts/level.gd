@@ -1,21 +1,26 @@
 
 extends Node2D
-@export var max_apples: int = 15
-@export var max_leaf: int = 7
+
+@export var max_apples: int = 8
+@export var max_leaf: int = 4
 
 
+@onready var warning_label = $CanvasLayer2/warninglabel
+@onready var player = $player
+@onready var bird_timer = $birdtimer
+
+var bird_prefab = preload("res://bird.tscn")
 var leaf_prefab = preload("res://leaf.tscn")
 var apple_prefab = preload("res://apple.tscn")
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
- 
-
+	
 func _on_appletimer_timeout() -> void:
 	var current_apple = get_tree().get_nodes_in_group("apples").size()
 	if current_apple < max_apples:
@@ -33,4 +38,37 @@ func _on_leaftimer_timeout() -> void:
 		var random_x = randi_range(-665,804)
 		var random_y = randi_range(-422,485)
 		leaf.global_position = Vector2(random_x,random_y)
+		
+func start_random_bird_timer() -> void:
+	bird_timer.wait_time = randf_range(10.0, 20.0)
+	bird_timer.start()
+	
+func _on_bird_timer_timeout() -> void:
+	if player.is_hidden: 
+		start_random_bird_timer()
+		return
+		
+	warning_label.show()
+	await get_tree().create_timer(2.5).timeout
+	warning_label.hide()
+
+if not player.is_hidden:
+	var bird = bird_prefab.instantiate()
+ add_child(bird)
+
+bird.global_position = Vector2(player.global_position.x - 700, player.global_position.y)
+	
+	start_random_bird_timer()
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	

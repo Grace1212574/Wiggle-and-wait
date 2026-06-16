@@ -6,7 +6,7 @@ var score = 0
 @onready var apple_label = %Label
 var hidingplaces = []
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var direction = Input.get_vector("left","right","up","down")
 	velocity = direction * SPEED
 	move_and_slide()

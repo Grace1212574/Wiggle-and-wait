@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c60h1u3tirq2a"]
 
 [ext_resource type="Texture2D" uid="uid://bcw17b3eg5iw5" path="res://icon.svg" id="1_3ed3y"]
-[ext_resource type="Script" uid="uid://dipdw43k370q6" path="res://apple.gd" id="1_n78qv"]
+[ext_resource type="Script" uid="uid://dipdw43k370q6" path="res://scripts/apple.gd" id="1_n78qv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ed3y"]
 size = Vector2(18, 17.5)
