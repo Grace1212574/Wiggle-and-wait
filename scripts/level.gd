@@ -8,6 +8,7 @@ extends Node2D
 @onready var warning_label = $CanvasLayer2/warninglabel
 @onready var player = $player
 @onready var bird_timer = $birdtimer
+@onready var lable_timer = $labelTimer
 
 var bird_prefab = preload("res://bird.tscn")
 var leaf_prefab = preload("res://leaf.tscn")
@@ -42,33 +43,20 @@ func _on_leaftimer_timeout() -> void:
 func start_random_bird_timer() -> void:
 	bird_timer.wait_time = randf_range(10.0, 20.0)
 	bird_timer.start()
-	
-func _on_bird_timer_timeout() -> void:
-	if player.is_hidden: 
-		start_random_bird_timer()
-		return
-		
 	warning_label.show()
-	await get_tree().create_timer(2.5).timeout
+	lable_timer.start()
+	
+	
+
+
+func _on_birdtimer_timeout() -> void:
+	if player.visible: 
+		start_random_bird_timer()
+		var bird = bird_prefab.instantiate()
+		add_child(bird)
+		bird.global_position = Vector2(player.global_position.x - 700, player.global_position.y)
+		start_random_bird_timer()
+
+
+func _on_label_timer_timeout() -> void:
 	warning_label.hide()
-
-if not player.is_hidden:
-	var bird = bird_prefab.instantiate()
- add_child(bird)
-
-bird.global_position = Vector2(player.global_position.x - 700, player.global_position.y)
-	
-	start_random_bird_timer()
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
