@@ -162,6 +162,7 @@ text = "Apple: 0"
 script = ExtResource("5_f2txt")
 
 [node name="warninglabel" type="Label" parent="CanvasLayer2" unique_id=883750681]
+visible = false
 offset_left = -347.0
 offset_top = -220.0
 offset_right = 553.0
@@ -200,7 +201,7 @@ one_shot = true
 autostart = true
 
 [node name="labelTimer" type="Timer" parent="." unique_id=1741130600]
-wait_time = 5.5
+wait_time = 53.261
 
 [connection signal="timeout" from="apple/appletimer" to="." method="_on_appletimer_timeout"]
 [connection signal="timeout" from="leaftimer" to="." method="_on_leaftimer_timeout"]

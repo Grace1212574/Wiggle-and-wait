@@ -1,8 +1,8 @@
 
 extends Node2D
 
-@export var max_apples: int = 8
-@export var max_leaf: int = 4
+@export var max_apples: int = 13
+@export var max_leaf: int = 7
 
 
 @onready var warning_label = $CanvasLayer2/warninglabel
