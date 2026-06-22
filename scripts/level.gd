@@ -14,8 +14,9 @@ var bird_prefab = preload("res://bird.tscn")
 var leaf_prefab = preload("res://leaf.tscn")
 var apple_prefab = preload("res://apple.tscn")
 
+
 func _ready() -> void:
-	pass # Replace with function body.
+	start_random_bird_timer()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,20 +44,34 @@ func _on_leaftimer_timeout() -> void:
 func start_random_bird_timer() -> void:
 	bird_timer.wait_time = randf_range(10.0, 20.0)
 	bird_timer.start()
-	warning_label.show()
-	lable_timer.start()
-	
 	
 
 
 func _on_birdtimer_timeout() -> void:
-	if player.visible: 
+	if not player.visible: 
 		start_random_bird_timer()
-		var bird = bird_prefab.instantiate()
-		add_child(bird)
-		bird.global_position = Vector2(player.global_position.x - 700, player.global_position.y)
-		start_random_bird_timer()
+		
+	else:
+		print("player caught")
+		warning_label.show()
+		lable_timer.start()
 
 
 func _on_label_timer_timeout() -> void:
+	print("TIMER FINISHED! Spawning bird now...")
 	warning_label.hide()
+	$countdown_timer.stop()
+	
+	if player.visible:
+		var bird = bird_prefab.instantiate()
+		add_child(bird)
+		bird.global_position = Vector2(player.global_position.x - 700, player.global_position.y)
+		var anim = bird.get_node("AnimatedSprite2D")
+		if anim:
+			anim.play("default")
+		print("The bird caught you!")
+		start_random_bird_timer()
+		
+	else:
+		start_random_bird_timer()
+	

@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://eguwbnormo46"]
 
+[ext_resource type="Script" uid="uid://d1d2k53f53bjl" path="res://oblects/bird.gd" id="1_4crhd"]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_lijii"]
+resource_local_to_scene = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4crhd"]
 
 [node name="bird" type="Area2D" unique_id=81746127]
+script = ExtResource("1_4crhd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1688489767]
 sprite_frames = SubResource("SpriteFrames_lijii")
@@ -13,3 +17,5 @@ sprite_frames = SubResource("SpriteFrames_lijii")
 shape = SubResource("RectangleShape2D_4crhd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=799281117]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
