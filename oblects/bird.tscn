@@ -1,19 +1,55 @@
 [gd_scene format=3 uid="uid://eguwbnormo46"]
 
 [ext_resource type="Script" uid="uid://d1d2k53f53bjl" path="res://oblects/bird.gd" id="1_4crhd"]
+[ext_resource type="Texture2D" uid="uid://8ecejdny60hl" path="res://assets/images/bird attack.png" id="2_3gbrf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i2ty"]
+atlas = ExtResource("2_3gbrf")
+region = Rect2(0, 0, 140, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ue7pa"]
+atlas = ExtResource("2_3gbrf")
+region = Rect2(140, 0, 140, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op5ta"]
+atlas = ExtResource("2_3gbrf")
+region = Rect2(0, 140, 140, 140)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lijii"]
 resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2i2ty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue7pa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op5ta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue7pa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4crhd"]
+size = Vector2(154, 150)
 
 [node name="bird" type="Area2D" unique_id=81746127]
 script = ExtResource("1_4crhd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1688489767]
 sprite_frames = SubResource("SpriteFrames_lijii")
+autoplay = "default"
+frame = 3
+frame_progress = 0.5354727
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1923985268]
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_4crhd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=799281117]

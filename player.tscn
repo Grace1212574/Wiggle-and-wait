@@ -1,24 +1,41 @@
 [gd_scene format=3 uid="uid://c4emjvuen5p6j"]
 
-[ext_resource type="Texture2D" uid="uid://bcw17b3eg5iw5" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://biffj4p4csoyx" path="res://scripts/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://chtml2p1ih4u8" path="res://assets/images/worm.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(34, 33.5)
+size = Vector2(24, 49.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
-size = Vector2(29, 29.84375)
+size = Vector2(34, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3pqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqtel")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=2015092317]
 script = ExtResource("1_onrkg")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1438499509]
-position = Vector2(7.250001, -7.125)
-scale = Vector2(0.22265625, 0.21679686)
-texture = ExtResource("1_4flbx")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=684182783]
-position = Vector2(7, -7.75)
+position = Vector2(6, 0.25)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=478695205]
@@ -26,8 +43,14 @@ shape = SubResource("RectangleShape2D_onrkg")
 [node name="hitbox" type="Area2D" parent="." unique_id=1305312153]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=572695289]
-position = Vector2(7.5, -6.921875)
+position = Vector2(10, 0.5)
 shape = SubResource("RectangleShape2D_i3pqv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1854474690]
+position = Vector2(13, 0)
+sprite_frames = SubResource("SpriteFrames_sweqy")
+autoplay = "default"
+frame_progress = 0.2045383
 
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="hitbox" to="." method="_on_hitbox_area_exited"]
