@@ -3,13 +3,14 @@ extends Node2D
 
 @export var max_apples: int = 13
 @export var max_leaf: int = 7
+@export var bird_prefab: PackedScene = preload("res://bird.tscn")
 
 @onready var warning_label = $CanvasLayer2/warninglabel
 @onready var player = $player
 @onready var bird_timer = $birdtimer
 @onready var lable_timer = $labelTimer
 
-var bird_prefab = preload("res://bird.tscn")
+
 var leaf_prefab = preload("res://leaf.tscn")
 var apple_prefab = preload("res://apple.tscn")
 
@@ -42,9 +43,7 @@ func _on_leaftimer_timeout() -> void:
 	if current_leaf < max_leaf:
 		var leaf = leaf_prefab.instantiate()
 		get_tree().current_scene.add_child(leaf)
-		var random_x = randi_range(-665, 804)
-		var random_y = randi_range(-422, 485)
-		leaf.global_position = Vector2(random_x, random_y)
+		
 		
 func start_random_bird_timer() -> void:
 	bird_timer.wait_time = randf_range(10.0, 20.0)

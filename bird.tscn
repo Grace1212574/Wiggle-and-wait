@@ -1,18 +1,58 @@
 [gd_scene format=3 uid="uid://cl7rwbcwjxblu"]
 
-[ext_resource type="Texture2D" uid="uid://bcw17b3eg5iw5" path="res://icon.svg" id="1_g5k2s"]
+[ext_resource type="Script" uid="uid://t6uwwadgytxq" path="res://bird.gd" id="1_crnqq"]
+[ext_resource type="Texture2D" uid="uid://8ecejdny60hl" path="res://assets/images/bird attack.png" id="1_g5k2s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i2ty"]
+atlas = ExtResource("1_g5k2s")
+region = Rect2(0, 0, 140, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ue7pa"]
+atlas = ExtResource("1_g5k2s")
+region = Rect2(140, 0, 140, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op5ta"]
+atlas = ExtResource("1_g5k2s")
+region = Rect2(0, 140, 140, 140)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crnqq"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2i2ty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue7pa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op5ta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue7pa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crnqq"]
-size = Vector2(506, 452)
+size = Vector2(558, 452)
 
-[node name="bird" type="Node2D" unique_id=669877540]
+[node name="bird" type="Area2D" unique_id=1885414268]
+script = ExtResource("1_crnqq")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2056778250]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1614593195]
 position = Vector2(-7, -3)
-scale = Vector2(3.7929688, 3.3554688)
-texture = ExtResource("1_g5k2s")
+rotation = 1.5877537
+scale = Vector2(3.7929688, 3.355469)
+sprite_frames = SubResource("SpriteFrames_crnqq")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1323251065]
+position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_crnqq")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=956759070]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=58016379]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

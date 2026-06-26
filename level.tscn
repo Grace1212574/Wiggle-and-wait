@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c4emjvuen5p6j" path="res://player.tscn" id="2_vonw3"]
 [ext_resource type="PackedScene" uid="uid://c60h1u3tirq2a" path="res://apple.tscn" id="4_0b4ue"]
 [ext_resource type="Script" uid="uid://qvaqj2qpg1g2" path="res://apple_label.gd" id="5_f2txt"]
+[ext_resource type="Texture2D" uid="uid://gktybls16enm" path="res://assets/images/leaf.png" id="6_1ainy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vonw3"]
 texture = ExtResource("1_u52ul")
@@ -193,9 +194,6 @@ position = Vector2(-665, 474)
 wait_time = 1.1429999999999998
 autostart = true
 
-[node name="leaftimer" type="Timer" parent="." unique_id=138557762]
-autostart = true
-
 [node name="birdtimer" type="Timer" parent="." unique_id=308350654]
 one_shot = true
 
@@ -203,7 +201,17 @@ one_shot = true
 wait_time = 53.261
 one_shot = true
 
+[node name="leaf" type="Area2D" parent="." unique_id=698519792]
+
+[node name="leaftimer" type="Timer" parent="leaf" unique_id=138557762]
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="leaf/leaftimer" unique_id=449358838]
+position = Vector2(-32.875004, -15.499999)
+scale = Vector2(1.353125, 0.68749994)
+texture = ExtResource("6_1ainy")
+
 [connection signal="timeout" from="apple/appletimer" to="." method="_on_appletimer_timeout"]
-[connection signal="timeout" from="leaftimer" to="." method="_on_leaftimer_timeout"]
 [connection signal="timeout" from="birdtimer" to="." method="_on_birdtimer_timeout"]
 [connection signal="timeout" from="labelTimer" to="." method="_on_label_timer_timeout"]
+[connection signal="timeout" from="leaf/leaftimer" to="." method="_on_leaftimer_timeout"]

@@ -1,26 +1,21 @@
 [gd_scene format=3 uid="uid://cnoe2tenwm8x4"]
 
 [ext_resource type="Script" uid="uid://bly6lmtotiacj" path="res://leaf.gd" id="1_qihfy"]
-[ext_resource type="Texture2D" uid="uid://bcw17b3eg5iw5" path="res://icon.svg" id="2_jiete"]
+[ext_resource type="Texture2D" uid="uid://gktybls16enm" path="res://assets/images/leaf.png" id="2_qihfy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qihfy"]
-size = Vector2(79, 27)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbfpc"]
-size = Vector2(70.5, 22)
+size = Vector2(81.25, 47.25)
 
 [node name="leaf" type="Node2D" unique_id=648045290 groups=["leaf"]]
 script = ExtResource("1_qihfy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=609512715]
-scale = Vector2(0.53125, 0.15625)
-texture = ExtResource("2_jiete")
+position = Vector2(-32.875004, -15.499999)
+scale = Vector2(1.353125, 0.68749994)
+texture = ExtResource("2_qihfy")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=170308140 groups=["hide"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=26080239]
-position = Vector2(-1.5, 0.5)
+position = Vector2(-20.375, -14.375)
 shape = SubResource("RectangleShape2D_qihfy")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="hitbox" unique_id=1887297594]
-shape = SubResource("RectangleShape2D_kbfpc")
