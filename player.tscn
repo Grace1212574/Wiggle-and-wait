@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://chtml2p1ih4u8" path="res://assets/images/worm.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(24, 49.5)
+size = Vector2(38.405003, 87)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
-size = Vector2(34, 57)
+size = Vector2(38.405006, 87)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
 atlas = ExtResource("2_onrkg")
@@ -32,10 +32,11 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=2015092317]
+scale = Vector2(0.9113395, 1)
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=684182783]
-position = Vector2(6, 0.25)
+position = Vector2(-13.716072, 14.5)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=478695205]
@@ -43,11 +44,12 @@ shape = SubResource("RectangleShape2D_onrkg")
 [node name="hitbox" type="Area2D" parent="." unique_id=1305312153]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=572695289]
-position = Vector2(10, 0.5)
+position = Vector2(-12.618788, 13.5)
 shape = SubResource("RectangleShape2D_i3pqv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1854474690]
-position = Vector2(13, 0)
+position = Vector2(-2.425558, 14.500003)
+scale = Vector2(1.5454396, 1.78)
 sprite_frames = SubResource("SpriteFrames_sweqy")
 autoplay = "default"
 frame_progress = 0.2045383
