@@ -15,11 +15,7 @@ var apple_prefab = preload("res://apple.tscn")
 
 func _ready() -> void:
 	
-	bird_timer.one_shot = true
-	bird_timer.autostart = false
-	label_timer.one_shot = true
-	label_timer.autostart = false
-	
+
 	warning_label.hide()
 	
 	for i in range(max_apples):
@@ -48,7 +44,10 @@ func _on_appletimer_timeout() -> void:
 		add_child(apple)
 
 func _on_leaftimer_timeout() -> void:
-	pass
+	if warning_label.visible and not player.visible:
+		warning_label.hide()
+		label_timer.stop()
+		start_random_bird_timer()
  
 		
 func start_random_bird_timer() -> void:
@@ -80,4 +79,4 @@ func _on_label_timer_timeout() -> void:
 	else:
 		start_random_bird_timer()
 		
-		
+	

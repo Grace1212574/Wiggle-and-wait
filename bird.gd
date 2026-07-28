@@ -12,11 +12,11 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		if body.visible:
-			print("🦅 The bird caught the worm!")
 			if body.has_method("set_physics_process"):
 				body.set_physics_process(false) 
 			await get_tree().create_timer(0.2).timeout
 			body.visible = false
 			await get_tree().create_timer(1.0).timeout
+			Globals.score = 0
 			get_tree().reload_current_scene()
 			

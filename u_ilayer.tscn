@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cowsaseqpe3yl"]
+
+[ext_resource type="PackedScene" uid="uid://ivfcx3nvvfi2" path="res://main_menu.tscn" id="1_s3vd6"]
+
+[node name="UIlayer" unique_id=905851077 instance=ExtResource("1_s3vd6")]
+
+[connection signal="pressed" from="BoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="BoxContainer/highscore" to="." method="_on_highscore_pressed"]
+[connection signal="pressed" from="BoxContainer/exit" to="." method="_on_exit_pressed"]
