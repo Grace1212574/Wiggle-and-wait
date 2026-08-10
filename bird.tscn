@@ -37,7 +37,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crnqq"]
-size = Vector2(558, 452)
+size = Vector2(558, 568)
 
 [node name="bird" type="Area2D" unique_id=1885414268]
 script = ExtResource("1_crnqq")
@@ -50,7 +50,7 @@ sprite_frames = SubResource("SpriteFrames_crnqq")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1323251065]
-position = Vector2(0, -5)
+position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_crnqq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=58016379]

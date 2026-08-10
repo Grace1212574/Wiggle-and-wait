@@ -36,7 +36,7 @@ scale = Vector2(0.9113395, 1)
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=684182783]
-position = Vector2(-13.716072, 14.5)
+position = Vector2(54.864296, 15)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=478695205]
@@ -44,11 +44,11 @@ shape = SubResource("RectangleShape2D_onrkg")
 [node name="hitbox" type="Area2D" parent="." unique_id=1305312153]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=572695289]
-position = Vector2(-12.618788, 13.5)
+position = Vector2(54.86429, 15)
 shape = SubResource("RectangleShape2D_i3pqv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1854474690]
-position = Vector2(-2.425558, 14.500003)
+position = Vector2(64.73987, 14.999999)
 scale = Vector2(1.5454396, 1.78)
 sprite_frames = SubResource("SpriteFrames_sweqy")
 autoplay = "default"

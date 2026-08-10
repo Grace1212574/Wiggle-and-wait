@@ -18,8 +18,6 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		self.visible = false
 		modulate.a = 0.5
 		
-	if area.is_in_group("mud"): 
-		SPEED = 150.0
 		
 func _on_hitbox_area_exited(area: Area2D) -> void:
 	if area.is_in_group("hide"):
@@ -27,7 +25,6 @@ func _on_hitbox_area_exited(area: Area2D) -> void:
 		if hidingplaces.is_empty():
 			self.visible = true
 			modulate.a = 1.0
-			
-	if area.is_in_group("mud"): # 👈 4. NEW: When you leave mud...
-		SPEED = 300.0
 	
+	
+			
