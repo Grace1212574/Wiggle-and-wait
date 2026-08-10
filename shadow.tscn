@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b7ogjjlsn5q12"]
+
+[ext_resource type="Script" uid="uid://cb6mberfebmhb" path="res://shadow.gd" id="1_6pqxc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n2o5g"]
+radius = 85.23497
+
+[node name="Shadow" type="Area2D" unique_id=1858772984]
+script = ExtResource("1_6pqxc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1740506522]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1637793511]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_n2o5g")
+disabled = true
+
+[node name="Timer" type="Timer" parent="." unique_id=533859134]
+wait_time = 2.0
+autostart = true
