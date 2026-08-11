@@ -12,6 +12,7 @@ radius = 53.70758
 height = 274.41037
 
 [node name="leaf" type="Node2D" unique_id=648045290 groups=["leaf"]]
+scale = Vector2(0.72537684, 0.74457455)
 script = ExtResource("1_qihfy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=609512715]

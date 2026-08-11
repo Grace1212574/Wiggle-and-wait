@@ -8,7 +8,10 @@ var hidingplaces = []
 func _physics_process(_delta: float) -> void:
 	var direction = Input.get_vector("left","right","up","down")
 	velocity = direction * SPEED
+	if direction != Vector2.ZERO:
+		self.rotation = direction.angle()
 	move_and_slide()
+
 
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
@@ -25,6 +28,8 @@ func _on_hitbox_area_exited(area: Area2D) -> void:
 		if hidingplaces.is_empty():
 			self.visible = true
 			modulate.a = 1.0
+
+
 	
 	
 			

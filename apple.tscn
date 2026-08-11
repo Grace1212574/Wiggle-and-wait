@@ -4,18 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://cxcnlf1hk3hwh" path="res://assets/images/apple.png" id="2_n78qv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ed3y"]
-size = Vector2(48, 52)
+size = Vector2(27.25, 29.5)
 
 [node name="apple" type="Area2D" unique_id=2008795732 groups=["apples"]]
 script = ExtResource("1_n78qv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1497666506]
-position = Vector2(-3.500002, 20.500002)
-scale = Vector2(3.4755554, 3.4536877)
+position = Vector2(15, 14)
+scale = Vector2(1.9375, 1.875)
 texture = ExtResource("2_n78qv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=126193539]
-position = Vector2(3, 24)
+position = Vector2(20.375, 15.75)
 shape = SubResource("RectangleShape2D_3ed3y")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
