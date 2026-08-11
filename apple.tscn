@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://c60h1u3tirq2a"]
 
 [ext_resource type="Script" uid="uid://dipdw43k370q6" path="res://scripts/apple.gd" id="1_n78qv"]
-[ext_resource type="Texture2D" uid="uid://cxcnlf1hk3hwh" path="res://assets/images/apple.png" id="2_n78qv"]
+[ext_resource type="Texture2D" uid="uid://c1orqrfr5gjnt" path="res://oblects/nutriance.png" id="2_n78qv"]
+[ext_resource type="AudioStream" uid="uid://dch5ay318q0n" path="res://wolfy_sanic-collect-ring-15982.mp3" id="3_whgpf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ed3y"]
-size = Vector2(27.25, 29.5)
+size = Vector2(40.625, 36.75)
 
 [node name="apple" type="Area2D" unique_id=2008795732 groups=["apples"]]
 script = ExtResource("1_n78qv")
@@ -15,7 +16,10 @@ scale = Vector2(1.9375, 1.875)
 texture = ExtResource("2_n78qv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=126193539]
-position = Vector2(20.375, 15.75)
+position = Vector2(15.6875, 15.625)
 shape = SubResource("RectangleShape2D_3ed3y")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1810184868]
+stream = ExtResource("3_whgpf")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
