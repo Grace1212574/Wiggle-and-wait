@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dhfnk3pkm5ppu"]
+
+[ext_resource type="Script" uid="uid://betin1klw33dq" path="res://sprinkler.gd" id="1_6ivj2"]
+[ext_resource type="Texture2D" uid="uid://bcw17b3eg5iw5" path="res://icon.svg" id="2_mk40p"]
+
+[node name="sprinkler" type="Node2D" unique_id=1596136313]
+script = ExtResource("1_6ivj2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=328663994]
+texture = ExtResource("2_mk40p")
+
+[node name="Timer" type="Timer" parent="." unique_id=1747747783]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

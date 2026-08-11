@@ -1,18 +1,17 @@
 [gd_scene format=3 uid="uid://cnoe2tenwm8x4"]
 
 [ext_resource type="Script" uid="uid://bly6lmtotiacj" path="res://leaf.gd" id="1_qihfy"]
-[ext_resource type="Texture2D" uid="uid://gktybls16enm" path="res://assets/images/leaf.png" id="2_qihfy"]
+[ext_resource type="Texture2D" uid="uid://c0ke5epbagk78" path="res://oblects/banana.png" id="2_qihfy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jiete"]
+size = Vector2(202.55527, 676.9265)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qihfy"]
-radius = 53.272026
-height = 293.40582
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jiete"]
-radius = 53.70758
-height = 274.41037
+radius = 171.91028
+height = 562.4658
 
 [node name="leaf" type="Node2D" unique_id=648045290 groups=["leaf"]]
-scale = Vector2(0.72537684, 0.74457455)
+scale = Vector2(0.30115068, 0.44318435)
 script = ExtResource("1_qihfy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=609512715]
@@ -23,13 +22,13 @@ texture = ExtResource("2_qihfy")
 [node name="hitbox" type="Area2D" parent="." unique_id=170308140 groups=["hide"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=26080239]
-position = Vector2(7.9999995, -11.000001)
-rotation = -1.2283369
-shape = SubResource("CapsuleShape2D_qihfy")
+position = Vector2(-77.86913, 73.20697)
+rotation = -1.5711902
+shape = SubResource("RectangleShape2D_jiete")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1666594542]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1400123563]
-position = Vector2(8, -7)
-rotation = -1.1618994
-shape = SubResource("CapsuleShape2D_jiete")
+position = Vector2(-92.365776, -18.802685)
+rotation = -1.5708091
+shape = SubResource("CapsuleShape2D_qihfy")

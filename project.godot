@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Wiggle and wait"
-run/main_scene="uid://dovi2rt66ftpq"
+run/main_scene="uid://cowsaseqpe3yl"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
