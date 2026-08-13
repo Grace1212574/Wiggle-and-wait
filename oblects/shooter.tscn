@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c8a6cvth7ikis"]
+
+[ext_resource type="Script" uid="uid://hpixh7fngrox" path="res://shooter.gd" id="1_dalhy"]
+[ext_resource type="Texture2D" uid="uid://b2jilmqct884f" path="res://Wiggle and wait 1/index.icon.png" id="2_jt8o0"]
+
+[node name="shooter" type="Node2D" unique_id=112664219]
+script = ExtResource("1_dalhy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2039137015]
+position = Vector2(1, 0)
+texture = ExtResource("2_jt8o0")
+
+[node name="Timer" type="Timer" parent="." unique_id=468543504]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

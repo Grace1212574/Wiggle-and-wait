@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://t6uwwadgytxq" path="res://bird.gd" id="1_crnqq"]
 [ext_resource type="Texture2D" uid="uid://8ecejdny60hl" path="res://assets/images/bird attack.png" id="1_g5k2s"]
+[ext_resource type="AudioStream" uid="uid://epl6i7a8u2sf" path="res://lordsonny-long-whoosh-194554.mp3" id="3_cchwj"]
+[ext_resource type="AudioStream" uid="uid://dr7wdpvvm07k8" path="res://dragon-studio-crow-calls-raspy-echoing-472377.mp3" id="4_6ljjq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2i2ty"]
 atlas = ExtResource("1_g5k2s")
@@ -54,5 +56,11 @@ position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_crnqq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=58016379]
+
+[node name="swoop" type="AudioStreamPlayer2D" parent="." unique_id=1506351233]
+stream = ExtResource("3_cchwj")
+
+[node name="warning" type="AudioStreamPlayer2D" parent="." unique_id=2016820301]
+stream = ExtResource("4_6ljjq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

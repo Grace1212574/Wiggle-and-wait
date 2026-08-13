@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cwoso7gsqbh45" path="res://scripts/level.gd" id="1_oi3di"]
 [ext_resource type="Texture2D" uid="uid://cwcvie2v0o36c" path="res://tileset/tilemap.png" id="1_u52ul"]
 [ext_resource type="PackedScene" uid="uid://c4emjvuen5p6j" path="res://player.tscn" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://b7ogjjlsn5q12" path="res://shadow.tscn" id="3_n6hdu"]
 [ext_resource type="PackedScene" uid="uid://c60h1u3tirq2a" path="res://apple.tscn" id="4_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://cnoe2tenwm8x4" path="res://leaf.tscn" id="4_n6hdu"]
 [ext_resource type="Script" uid="uid://qvaqj2qpg1g2" path="res://apple_label.gd" id="5_f2txt"]
@@ -183,6 +184,9 @@ offset_top = -220.0
 offset_right = 553.0
 offset_bottom = 680.0
 text = "The bird is coming hide!!!!"
+
+[node name="Boot" parent="CanvasLayer2" unique_id=1858772984 instance=ExtResource("3_n6hdu")]
+position = Vector2(-1819, 243)
 
 [node name="tilemaps" type="Node2D" parent="." unique_id=1753135470]
 z_index = -2

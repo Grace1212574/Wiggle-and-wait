@@ -4,17 +4,7 @@ const FLY_SPEED = 600.0
 
 func _ready() -> void:
 	get_tree().create_timer(4.0).timeout.connect(queue_free)
-	set_physics_process(false) 
-	
-	$Warning.play()
-	await get_tree().create_timer(1.0).timeout
-	
-	$Swoop.play()
-	set_physics_process(true) 
-	
-	# 4. Delete the bird 4 seconds after it starts flying
-	get_tree().create_timer(4.0).timeout.connect(queue_free)
-	
+
 
 	
 func _physics_process(delta: float) -> void:

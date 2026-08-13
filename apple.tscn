@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dipdw43k370q6" path="res://scripts/apple.gd" id="1_n78qv"]
 [ext_resource type="Texture2D" uid="uid://c1orqrfr5gjnt" path="res://oblects/nutriance.png" id="2_n78qv"]
-[ext_resource type="AudioStream" uid="uid://epl6i7a8u2sf" path="res://lordsonny-long-whoosh-194554.mp3" id="3_xniv1"]
-[ext_resource type="AudioStream" uid="uid://dr7wdpvvm07k8" path="res://dragon-studio-crow-calls-raspy-echoing-472377.mp3" id="4_aq6lu"]
+[ext_resource type="AudioStream" uid="uid://dch5ay318q0n" path="res://wolfy_sanic-collect-ring-15982.mp3" id="3_whgpf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ed3y"]
 size = Vector2(35.15625, 36.09375)
@@ -20,10 +19,7 @@ texture = ExtResource("2_n78qv")
 position = Vector2(20.421875, 38.953125)
 shape = SubResource("RectangleShape2D_3ed3y")
 
-[node name="swoop" type="AudioStreamPlayer2D" parent="." unique_id=1810184868]
-stream = ExtResource("3_xniv1")
-
-[node name="warning" type="AudioStreamPlayer2D" parent="." unique_id=1490106344]
-stream = ExtResource("4_aq6lu")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1151785083]
+stream = ExtResource("3_whgpf")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
