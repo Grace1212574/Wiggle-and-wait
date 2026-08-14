@@ -9,7 +9,6 @@ extends Node2D
 @onready var bird_timer = $birdtimer
 @onready var label_timer = $labelTimer
 
-
 var leaf_prefab = preload("res://leaf.tscn")
 var apple_prefab = preload("res://apple.tscn")
 

@@ -19,7 +19,9 @@ texture = ExtResource("2_n78qv")
 position = Vector2(20.421875, 38.953125)
 shape = SubResource("RectangleShape2D_3ed3y")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1151785083]
+[node name="collecting" type="AudioStreamPlayer" parent="." unique_id=1151785083]
 stream = ExtResource("3_whgpf")
+volume_db = 7.856
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

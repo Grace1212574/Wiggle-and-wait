@@ -22,6 +22,7 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		modulate.a = 0.5
 		
 		
+		
 func _on_hitbox_area_exited(area: Area2D) -> void:
 	if area.is_in_group("hide"):
 		hidingplaces.erase(area)
