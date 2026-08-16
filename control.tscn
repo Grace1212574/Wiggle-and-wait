@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ds6c57awld3ot"]
 
+[ext_resource type="Script" uid="uid://bvje3d81hklp7" path="res://endhighscore.gd" id="1_0fbet"]
+
 [node name="game over" type="Control" unique_id=118378424]
 layout_mode = 3
 anchors_preset = 0
@@ -23,7 +25,7 @@ theme_override_colors/font_color = Color(1, 0.14901961, 0.2, 1)
 theme_override_font_sizes/font_size = 100
 text = "GAME OVER!!!"
 
-[node name="Label2" type="Label" parent="." unique_id=1061432051]
+[node name="endhighscore" type="Label" parent="." unique_id=1061432051]
 layout_mode = 0
 offset_left = 475.0
 offset_top = 321.0
@@ -31,3 +33,4 @@ offset_right = 982.0
 offset_bottom = 527.0
 theme_override_font_sizes/font_size = 30
 text = "Highscore: 0"
+script = ExtResource("1_0fbet")

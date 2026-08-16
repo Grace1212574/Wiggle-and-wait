@@ -4,6 +4,9 @@
 
 [node name="MAINMENU" unique_id=905851077 instance=ExtResource("1_s3vd6")]
 
+[node name="highscore" parent="BoxContainer" parent_id_path=PackedInt32Array(1717561122) index="1" unique_id=895025676]
+visible = false
+
 [connection signal="pressed" from="BoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="BoxContainer/highscore" to="." method="_on_highscore_pressed"]
 [connection signal="pressed" from="BoxContainer/exit" to="." method="_on_exit_pressed"]
