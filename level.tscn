@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c60h1u3tirq2a" path="res://apple.tscn" id="4_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://cnoe2tenwm8x4" path="res://leaf.tscn" id="4_n6hdu"]
 [ext_resource type="Script" uid="uid://qvaqj2qpg1g2" path="res://apple_label.gd" id="5_f2txt"]
+[ext_resource type="AudioStream" uid="uid://bsco888qp7co4" path="res://assets/music/tatamusic-gaming-game-video-game-music-550079.mp3" id="8_km5ld"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vonw3"]
 texture = ExtResource("1_u52ul")
@@ -252,6 +253,10 @@ position = Vector2(478, -613)
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=881030699]
 position = Vector2(1829, -847)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1109813888]
+stream = ExtResource("8_km5ld")
+autoplay = true
 
 [connection signal="timeout" from="apple/appletimer" to="." method="_on_appletimer_timeout"]
 [connection signal="timeout" from="birdtimer" to="." method="_on_birdtimer_timeout"]

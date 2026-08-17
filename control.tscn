@@ -34,3 +34,11 @@ offset_bottom = 527.0
 theme_override_font_sizes/font_size = 30
 text = "Highscore: 0"
 script = ExtResource("1_0fbet")
+
+[node name="exit" type="Label" parent="." unique_id=504613099]
+layout_mode = 0
+offset_left = 459.0
+offset_top = 377.0
+offset_right = 662.0
+offset_bottom = 400.0
+text = "press space to main menu"

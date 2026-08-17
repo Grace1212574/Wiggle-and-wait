@@ -21,4 +21,5 @@ func _on_body_entered(body: Node2D) -> void:
 			await get_tree().create_timer(1.0).timeout
 			Globals.score = 0
 			get_tree().reload_current_scene()
+		
 			
