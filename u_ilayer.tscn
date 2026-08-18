@@ -2,7 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://ivfcx3nvvfi2" path="res://main_menu.tscn" id="1_s3vd6"]
 
+[sub_resource type="FontVariation" id="FontVariation_s3vd6"]
+
 [node name="MAINMENU" unique_id=905851077 instance=ExtResource("1_s3vd6")]
+
+[node name="start" parent="BoxContainer" parent_id_path=PackedInt32Array(1717561122) index="0" unique_id=876830435]
+theme_override_colors/font_color = Color(0.95596343, 0.9559633, 0.95596343, 1)
+theme_override_colors/font_focus_color = Color(0.6672858, 0.6983196, 0.4000428, 1)
+theme_override_fonts/font = SubResource("FontVariation_s3vd6")
+action_mode = 0
 
 [node name="highscore" parent="BoxContainer" parent_id_path=PackedInt32Array(1717561122) index="1" unique_id=895025676]
 visible = false

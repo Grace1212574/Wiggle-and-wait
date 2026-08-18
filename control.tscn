@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://ds6c57awld3ot"]
 
 [ext_resource type="Script" uid="uid://bvje3d81hklp7" path="res://endhighscore.gd" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://bqccbj6m8014x" path="res://gameover.gd" id="1_62e2m"]
 
 [node name="game over" type="Control" unique_id=118378424]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_62e2m")
 
 [node name="Label" type="Label" parent="." unique_id=552312460]
 layout_mode = 1

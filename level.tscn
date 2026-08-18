@@ -179,12 +179,16 @@ script = ExtResource("5_f2txt")
 metadata/_edit_use_anchors_ = true
 
 [node name="warninglabel" type="Label" parent="CanvasLayer2" unique_id=883750681]
-visible = false
+modulate = Color(1, 0.21345344, 0.15216768, 1)
+self_modulate = Color(0.99981743, 0.97625214, 0.9765006, 1)
 offset_left = -347.0
 offset_top = -220.0
 offset_right = 553.0
 offset_bottom = 680.0
 text = "The bird is coming hide!!!!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer2/warninglabel" unique_id=98068044]
+speed_scale = 4.0
 
 [node name="Boot" parent="CanvasLayer2" unique_id=1858772984 instance=ExtResource("3_n6hdu")]
 position = Vector2(-1819, 243)
