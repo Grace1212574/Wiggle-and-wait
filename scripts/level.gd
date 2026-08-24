@@ -50,7 +50,7 @@ func _on_leaftimer_timeout() -> void:
  
 		
 func start_random_bird_timer() -> void:
-	bird_timer.wait_time = randf_range(10.0, 20.0)
+	bird_timer.wait_time = randf_range(8.0, 20.0)
 	bird_timer.start()
 
 func _on_birdtimer_timeout() -> void:
@@ -61,7 +61,7 @@ func _on_birdtimer_timeout() -> void:
 	else:
 		warning_label.show()
 		AudioManager.play("res://assets/sounds/dragon-studio-crow-calls-raspy-echoing-472377.mp3")
-		label_timer.wait_time = 5.0 # Forcing a 5-second window to react
+		label_timer.wait_time = 3.0 
 		label_timer.start()
 
 func _on_label_timer_timeout() -> void:
