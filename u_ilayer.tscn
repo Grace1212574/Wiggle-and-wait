@@ -28,6 +28,27 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycaqq"]
+bg_color = Color(0.49803922, 0.654902, 0.4117647, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5xbn"]
+bg_color = Color(0.34901962, 0.4745098, 0.2784314, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d36ad"]
+bg_color = Color(0.44705883, 0.59607846, 0.3647059, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgsuc"]
 bg_color = Color(0.49803922, 0.654902, 0.4117647, 1)
 corner_radius_top_left = 8
@@ -77,7 +98,18 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_h3n7n")
 action_mode = 0
 
 [node name="highscore" parent="BoxContainer" index="1" unique_id=895025676]
-visible = false
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ycaqq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5xbn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d36ad")
+text = "Rules"
 
 [node name="exit" parent="BoxContainer" index="2" unique_id=864214770]
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -91,6 +123,52 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_sgsuc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ero20")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6u1bo")
+
+[node name="Panel2" type="Panel" parent="." index="2" unique_id=29913087]
+offset_left = 232.0
+offset_top = 94.0
+offset_right = 952.0
+offset_bottom = 510.0
+
+[node name="Label" type="Label" parent="Panel2" index="0" unique_id=465628680]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 53.0
+offset_right = 556.0
+offset_bottom = 214.0
+text = "How to play"
+
+[node name="Label2" type="Label" parent="Panel2" index="1" unique_id=879993609]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 91.0
+offset_right = 403.0
+offset_bottom = 275.0
+text = " wasd to move
+your goal is to collect as much nutrice as possible, but watch out for the nabiohod bird
+"
+
+[node name="start" type="Button" parent="Panel2" index="2" unique_id=796579467]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 341.0
+offset_right = 568.0
+offset_bottom = 396.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.95596343, 0.9559633, 0.95596343, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_s3vd6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_3otou")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_od6y2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h3n7n")
+action_mode = 0
+text = "Back"
 
 [connection signal="pressed" from="BoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="BoxContainer/highscore" to="." method="_on_highscore_pressed"]

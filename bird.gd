@@ -20,7 +20,6 @@ func _on_body_entered(body: Node2D) -> void:
 			await get_tree().create_timer(0.2).timeout
 			body.visible = false
 			await get_tree().create_timer(1.0).timeout
-			Globals.score = 0
 			get_tree().change_scene_to_file("res://control.tscn")
 		
 			
