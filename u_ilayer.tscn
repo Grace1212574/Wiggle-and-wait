@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://cowsaseqpe3yl"]
 
 [ext_resource type="PackedScene" uid="uid://ivfcx3nvvfi2" path="res://main_menu.tscn" id="1_s3vd6"]
+[ext_resource type="FontFile" uid="uid://bmbcory15shla" path="res://oblects/PhantomGuardiansCoolGamingBold-q2Rlx.otf" id="2_3otou"]
+[ext_resource type="Texture2D" uid="uid://chtml2p1ih4u8" path="res://assets/images/worm.png" id="3_od6y2"]
+[ext_resource type="Texture2D" uid="uid://c1orqrfr5gjnt" path="res://oblects/nutriance.png" id="4_sgsuc"]
+[ext_resource type="Texture2D" uid="uid://c0ke5epbagk78" path="res://oblects/banana.png" id="5_ero20"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3vd6"]
 bg_color = Color(0.30804366, 0.4045917, 0.299113, 1)
-
-[sub_resource type="FontVariation" id="FontVariation_s3vd6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3otou"]
 bg_color = Color(0.49926096, 0.65518785, 0.4134369, 1)
@@ -70,13 +72,34 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agjps"]
+bg_color = Color(0.34901962, 0.4745098, 0.2784314, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhdrx"]
+bg_color = Color(0.49803922, 0.654902, 0.4117647, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a28oo"]
+bg_color = Color(0.34901962, 0.4745098, 0.2784314, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="MAINMENU" unique_id=905851077 instance=ExtResource("1_s3vd6")]
 
 [node name="Panel" type="Panel" parent="." index="0" unique_id=1420147487]
-offset_left = -5.0
-offset_top = -8.0
-offset_right = 1164.0
-offset_bottom = 643.0
+offset_left = -6.0
+offset_top = -3.0
+offset_right = 1163.0
+offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_s3vd6")
 
 [node name="BoxContainer" parent="." index="1" unique_id=1717561122]
@@ -90,7 +113,7 @@ theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = SubResource("FontVariation_s3vd6")
+theme_override_fonts/font = ExtResource("2_3otou")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_3otou")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_od6y2")
@@ -105,6 +128,7 @@ theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_3otou")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_ycaqq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_i5xbn")
@@ -119,36 +143,62 @@ theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_3otou")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_sgsuc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ero20")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6u1bo")
 
 [node name="Panel2" type="Panel" parent="." index="2" unique_id=29913087]
-offset_left = 232.0
-offset_top = 94.0
-offset_right = 952.0
-offset_bottom = 510.0
+offset_left = 235.0
+offset_top = 89.0
+offset_right = 955.0
+offset_bottom = 505.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_agjps")
 
-[node name="Label" type="Label" parent="Panel2" index="0" unique_id=465628680]
+[node name="Panel" type="Panel" parent="Panel2" index="0" unique_id=988906767]
 layout_mode = 0
-offset_left = 131.0
-offset_top = 53.0
-offset_right = 556.0
-offset_bottom = 214.0
+offset_left = 24.0
+offset_top = 17.0
+offset_right = 696.0
+offset_bottom = 321.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qhdrx")
+
+[node name="Panel2" type="Panel" parent="Panel2" index="1" unique_id=555486768]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 27.0
+offset_right = 461.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a28oo")
+
+[node name="Label" type="Label" parent="Panel2" index="2" unique_id=465628680]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 24.0
+offset_right = 702.0
+offset_bottom = 185.0
+theme_override_fonts/font = ExtResource("2_3otou")
+theme_override_font_sizes/font_size = 37
 text = "How to play"
 
-[node name="Label2" type="Label" parent="Panel2" index="1" unique_id=879993609]
+[node name="Label2" type="Label" parent="Panel2" index="3" unique_id=879993609]
 layout_mode = 0
-offset_left = 190.0
-offset_top = 91.0
-offset_right = 403.0
-offset_bottom = 275.0
-text = " wasd to move
-your goal is to collect as much nutrice as possible, but watch out for the nabiohod bird
+offset_left = 88.0
+offset_top = 85.0
+offset_right = 755.0
+offset_bottom = 269.0
+theme_override_fonts/font = ExtResource("2_3otou")
+theme_override_font_sizes/font_size = 22
+text = "-  To move around use wasd 
+- Your goal is to collect as much nutrients as possible 
+- But watch out for the neighborhood bird will try to attack you
+- To get away from bird hid under the big bananas by entering 
+   through the opening in the banana
+- Enjoy :)
 "
 
-[node name="start" type="Button" parent="Panel2" index="2" unique_id=796579467]
+[node name="back" type="Button" parent="Panel2" index="4" unique_id=796579467]
 layout_mode = 0
 offset_left = 147.0
 offset_top = 341.0
@@ -162,7 +212,7 @@ theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = SubResource("FontVariation_s3vd6")
+theme_override_fonts/font = ExtResource("2_3otou")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_3otou")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_od6y2")
@@ -170,6 +220,52 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_h3n7n")
 action_mode = 0
 text = "Back"
 
+[node name="Worm2" type="Sprite2D" parent="Panel2" index="5" unique_id=238357637]
+position = Vector2(-115, 241)
+rotation = 2.9380033
+scale = Vector2(2.8899999, 2.44)
+texture = ExtResource("3_od6y2")
+offset = Vector2(0.6055374, -46.31147)
+
+[node name="Worm3" type="Sprite2D" parent="Panel2" index="6" unique_id=1322436227]
+position = Vector2(754.00006, -16.000067)
+rotation = -1.1810861
+scale = Vector2(1.8075864, 1.4244972)
+skew = 0.3050804
+texture = ExtResource("3_od6y2")
+
+[node name="Worm" type="Sprite2D" parent="Panel2" index="7" unique_id=106044304]
+position = Vector2(811, 435)
+rotation = 0.15052961
+scale = Vector2(3.241399, 1.928834)
+skew = 0.0591259
+texture = ExtResource("3_od6y2")
+
+[node name="Nutriance2" type="Sprite2D" parent="Panel2" index="8" unique_id=1196207425]
+position = Vector2(18, 499)
+texture = ExtResource("4_sgsuc")
+
+[node name="Nutriance3" type="Sprite2D" parent="Panel2" index="9" unique_id=2135037938]
+position = Vector2(-122, 56)
+texture = ExtResource("4_sgsuc")
+
+[node name="Nutriance4" type="Sprite2D" parent="Panel2" index="10" unique_id=973955600]
+position = Vector2(835, 132)
+texture = ExtResource("4_sgsuc")
+
+[node name="Nutriance5" type="Sprite2D" parent="Panel2" index="11" unique_id=747063544]
+position = Vector2(304, -67)
+texture = ExtResource("4_sgsuc")
+
+[node name="Banana" type="Sprite2D" parent="Panel2" index="12" unique_id=170231842]
+position = Vector2(101, -30)
+texture = ExtResource("5_ero20")
+
+[node name="Nutriance" type="Sprite2D" parent="Panel2" index="13" unique_id=693023195]
+position = Vector2(574, 484)
+texture = ExtResource("4_sgsuc")
+
 [connection signal="pressed" from="BoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="BoxContainer/highscore" to="." method="_on_highscore_pressed"]
 [connection signal="pressed" from="BoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Panel2/back" to="." method="_on_back_pressed"]

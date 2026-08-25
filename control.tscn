@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bqccbj6m8014x" path="res://gameover.gd" id="1_62e2m"]
 [ext_resource type="Script" uid="uid://bvje3d81hklp7" path="res://endhighscore.gd" id="2_62e2m"]
+[ext_resource type="FontFile" uid="uid://bmbcory15shla" path="res://oblects/PhantomGuardiansCoolGamingBold-q2Rlx.otf" id="2_qtu10"]
 
 [node name="game over" type="Control" unique_id=118378424]
 layout_mode = 3
@@ -22,30 +23,34 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 221.0
-offset_top = 160.0
-offset_right = 877.0
-offset_bottom = 297.0
+offset_left = 260.0
+offset_top = 132.0
+offset_right = 916.0
+offset_bottom = 287.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 0.14901961, 0.2, 1)
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("2_qtu10")
+theme_override_font_sizes/font_size = 131
 text = "GAME OVER!!!"
 
 [node name="endhighscore" type="Label" parent="." unique_id=1061432051]
 layout_mode = 0
-offset_left = 523.0
-offset_top = 315.0
-offset_right = 1030.0
-offset_bottom = 521.0
-theme_override_font_sizes/font_size = 30
+offset_left = 511.0
+offset_top = 309.0
+offset_right = 1018.0
+offset_bottom = 515.0
+theme_override_fonts/font = ExtResource("2_qtu10")
+theme_override_font_sizes/font_size = 40
 text = "score: 0"
 script = ExtResource("2_62e2m")
 
 [node name="exit" type="Label" parent="." unique_id=504613099]
 layout_mode = 0
-offset_left = 480.0
+offset_left = 474.0
 offset_top = 372.0
-offset_right = 683.0
-offset_bottom = 395.0
+offset_right = 682.0
+offset_bottom = 397.0
+theme_override_fonts/font = ExtResource("2_qtu10")
+theme_override_font_sizes/font_size = 21
 text = "press space to main menu"
