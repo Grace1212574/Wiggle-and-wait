@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioManager="*uid://lrenvo4t1yd"
-TransitionScreen="*uid://d1gwc4lk2g1sh"
-Globle="*uid://clber6yuf6qrl"
+Globals="*uid://mca766alde3i"
+TransitionScreen="*uid://dyu33dauivp0i"
 
 [global_group]
 

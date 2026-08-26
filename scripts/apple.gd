@@ -6,3 +6,4 @@ func _on_body_entered(body: Node2D) -> void:
 		Globals.score += 1
 		AudioManager.play("res://assets/sounds/wolfy_sanic-collect-ring-15982.mp3")
 		queue_free()
+		

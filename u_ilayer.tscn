@@ -96,10 +96,10 @@ corner_radius_bottom_left = 8
 [node name="MAINMENU" unique_id=905851077 instance=ExtResource("1_s3vd6")]
 
 [node name="Panel" type="Panel" parent="." index="0" unique_id=1420147487]
-offset_left = -6.0
-offset_top = -3.0
-offset_right = 1163.0
-offset_bottom = 648.0
+offset_left = -7.0
+offset_top = -11.0
+offset_right = 1162.0
+offset_bottom = 640.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_s3vd6")
 
 [node name="BoxContainer" parent="." index="1" unique_id=1717561122]
@@ -150,10 +150,10 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ero20")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6u1bo")
 
 [node name="Panel2" type="Panel" parent="." index="2" unique_id=29913087]
-offset_left = 235.0
-offset_top = 89.0
-offset_right = 955.0
-offset_bottom = 505.0
+offset_left = 220.0
+offset_top = 86.0
+offset_right = 940.0
+offset_bottom = 502.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_agjps")
 
 [node name="Panel" type="Panel" parent="Panel2" index="0" unique_id=988906767]

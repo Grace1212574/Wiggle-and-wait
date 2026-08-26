@@ -9,4 +9,4 @@ script = ExtResource("1_57neh")
 offset_right = 1155.0
 offset_bottom = 650.0
 mouse_filter = 2
-color = Color(0.6627451, 0.80784315, 1, 1)
+color = Color(0.6652809, 0.8595857, 0.610553, 1)
